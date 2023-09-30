@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.btn {
+  font-weight: bold;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 3rem;
+  border: 0;
+  border-radius: 3rem;
+  background-color: #6C63FF;
+}
+
+hr.dotted {
+  border-top: 1px dotted;
+  border-bottom: none;
+  margin: 4rem 2rem;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #283618;
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #fff 21px, transparent 1%) center, linear-gradient(#fff 21px, transparent 1%) center, #000;
+  background-size: 22px 22px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  font-weight: bold;
+}
+
+h2 {
+  color: #6C63FF;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#header-home {
+  max-width: 1280px;
+  margin: auto;
+}
+
+#logo {
+  width: 90px;
+  margin-left: 1rem;
+}
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  transition: all 2s ease-out;
+  /* Icons */
+}
+#main-nav .navbar-links {
+  height: 100%;
+}
+#main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+#main-nav a {
+  text-transform: uppercase;
+  border-bottom: 3px transparent solid;
+  padding: 1rem;
+  transition: border-color 0.5s;
+  font-size: 1.3rem;
+  display: block;
+}
+#main-nav a:hover {
+  border-color: #6C63FF;
+}
+#main-nav a.current {
+  border-color: #283618;
+}
+#main-nav .toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 5rem;
+  height: 4.5rem;
+}
+#main-nav .toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border-radius: 15px;
+}
+#main-nav .fa-user {
+  color: #0050A0;
+}
+#main-nav .fa-folder {
+  color: #F08000;
+}
+#main-nav .fa-envelope {
+  color: #000020;
+}
+#main-nav .fa-paperclip {
+  color: #D02020;
+}
+
+.container-top {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.hero-some i {
+  font-size: 3rem;
+  padding: 0.3rem;
+  color: #000;
+}
+
+/* About */
+.about {
+  align-items: center;
+  line-height: 2.5rem;
+}
+.about .about-avatar img {
+  margin-right: 1.5rem;
+  transform: rotateY(180deg);
+  max-width: 600px;
+}
+.about .container-about {
+  display: flex;
+}
+
+/* Techstack */
+#techstack {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#techstack h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #6C63FF;
+}
+#techstack figure {
+  display: inline-block;
+  margin: 50px auto;
+  align-self: flex-end;
+}
+#techstack figcaption {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  /* Skulle man muligvis display: none? */
+  text-align: center;
+  width: 100%;
+}
+#techstack img {
+  vertical-align: middle;
+  padding: 1.5rem;
+  max-height: 125px;
+  max-width: 150px;
+}
+
+/* Card style */
+.portfolie h2.overskrift {
+  text-align: center;
+}
+
+.cards {
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  font-family: "Raleway", sans-serif;
+  flex-wrap: wrap;
+}
+.cards .card {
+  min-width: 22rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+  position: relative;
+  color: rgb(240, 240, 240);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+.cards .card:nth-child(2), .cards .card:nth-child(3) {
+  margin-left: 2rem;
+}
+.cards .card img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  transition: opacity 0.2s ease-out;
+}
+.cards .card h2 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+.cards .card p, .cards .card a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+}
+.cards .card p {
+  inset: auto auto 80px 30px;
+  color: #000;
+}
+.cards .card a {
+  inset: auto auto 40px 30px;
+  color: #000;
+  text-decoration: none;
+}
+.cards .card a:nth-child(2) {
+  left: 275px;
+}
+.cards .card:hover h2 {
+  inset: auto auto 390px 30px;
+  transition: inset 0.3s ease-out;
+}
+.cards .card:hover p, .cards .card:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+.cards .card:hover img {
+  transition: opacity 0.3s ease-in;
+  opacity: 0.9;
+}
+
+.kontakt-box {
+  display: flex;
+  min-height: 35rem;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+.kontakt-box h2 {
+  text-align: center;
+}
+.kontakt-box .kontakt-text {
+  margin-top: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kontakt-box .kontakt-text img {
+  width: 450px;
+  display: block;
+  margin-top: 1rem;
+}
+.kontakt-box .kontakt-form {
+  margin-top: 2rem;
+  width: 50%;
+}
+.kontakt-box .kontakt-form .form-group {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 3.5rem;
+  border-radius: 2rem;
+  margin-bottom: 0.4rem;
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+}
+.kontakt-box .kontakt-form input {
+  width: 100%;
+  height: 100%;
+}
+.kontakt-box .kontakt-form input:focus {
+  border: red solid 5px;
+}
+.kontakt-box .kontakt-form input[type=text], .kontakt-box .kontakt-form input[type=email] {
+  border: none;
+  height: 3.3rem;
+}
+.kontakt-box .kontakt-form input[type=text]:focus, .kontakt-box .kontakt-form input[type=email]:focus {
+  border: 2px solid #6C63FF;
+}
+.kontakt-box .kontakt-form textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border: none;
+}
+.kontakt-box .kontakt-form ::placeholder {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #838788;
+  position: relative;
+  left: 0;
+}
+.kontakt-box .kontakt-form .btn {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+.kontakt-box .kontakt-form .btn:hover span {
+  display: none;
+}
+.kontakt-box .kontakt-form .btn:hover:before {
+  font: var(--fa-font-solid);
+  content: "\f1d8";
+}
+
+@media (max-width: 1024px) {
+  .container-top {
+    flex-direction: column;
+    max-width: 1024px;
+  }
+  #main-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #main-nav .toggle-button {
+    display: flex;
+  }
+  #main-nav .navbar-links {
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    height: 0;
+    width: 100%;
+  }
+  #main-nav .active {
+    display: flex;
+    opacity: 1;
+    height: auto;
+  }
+  #main-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  #main-nav ul li {
+    text-align: center;
+  }
+  #main-nav ul li a {
+    padding: 0.5rem 1rem;
+  }
+  #main-nav ul li a:hover {
+    border-color: transparent;
+    background-color: rgba(108, 99, 255, 0.4392156863);
+  }
+  .container {
+    flex-direction: column;
+  }
+  #about img {
+    max-width: 390px;
+  }
+  .about-avatar {
+    order: 2;
+  }
+  .about-avatar img {
+    margin-top: 2rem;
+  }
+  #techstack {
+    display: flex;
+    flex-direction: column;
+  }
+  #techstack h3 {
+    text-align: center;
+  }
+  #techstack .container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #projekter .cards {
+    flex-direction: column;
+  }
+  #projekter .cards .card {
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+  .kontakt-box {
+    align-items: center;
+    min-height: 50rem;
+  }
+}
+@media (max-width: 1150px) {
+  .cards {
+    justify-content: center;
+  }
+  .cards .card:nth-child(3) {
+    margin-top: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

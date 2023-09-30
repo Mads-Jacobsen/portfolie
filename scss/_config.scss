@@ -1,0 +1,20 @@
+// Baggrund
+// Farver
+$primary-color: #283618;
+$secondary-color: #6C63FF;
+$light-color: #606C38;
+$bg-color: #fff;
+$dot-color: #000;
+$color-primary-white: rgb(240, 240, 240);
+// Størrelser
+$dot-size: 1px;
+$dot-space: 22px;
+
+$website-width: 1280px;
+
+$breakpoint-desktop: 1024px;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+$font-1: 'Raleway', sans-serif;
+$font-2: 'Roboto', sans-serif;
