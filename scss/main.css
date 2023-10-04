@@ -8,6 +8,9 @@
   display: flex;
 }
 
+section, .hero {
+  margin: 1rem 2rem;
+}
 .btn {
   font-weight: bold;
   height: 2.5rem;
@@ -49,11 +52,6 @@ a {
   color: #283618;
 }
 
-p {
-  line-height: 2rem;
-  font-size: 1.2rem;
-}
-
 body {
   overflow-x: hidden;
   background: linear-gradient(90deg, #fff 21px, transparent 1%) center, linear-gradient(#fff 21px, transparent 1%) center, #000;
@@ -68,7 +66,6 @@ h1 {
 h2 {
   color: #6C63FF;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  margin-bottom: 1rem;
 }
 
 ul {
@@ -78,10 +75,6 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-}
-
-section, .hero {
-  margin: 1rem 2rem;
 }
 
 #header-home {
@@ -170,6 +163,10 @@ section, .hero {
 .about {
   align-items: center;
   line-height: 2.5rem;
+
+  p {
+    color: #000;
+  }
 }
 .about .about-avatar img {
   margin-right: 1.5rem;
@@ -273,7 +270,7 @@ section, .hero {
   text-decoration: none;
 }
 .cards .card a:nth-child(2) {
-  left: 250px;
+  left: 275px;
 }
 .cards .card:hover h2 {
   inset: auto auto 390px 30px;
@@ -288,7 +285,7 @@ section, .hero {
   opacity: 0.9;
 }
 
-#hundeskov-card h2, #hundeskov-card p, #hundeskov-card a {
+#hundeskov-card > h2, p {
   color: #fff;
 }
 
@@ -375,9 +372,6 @@ section, .hero {
     flex-direction: column;
     max-width: 1024px;
   }
-  .container-top .hero-content-text {
-    align-self: flex-start;
-  }
   #main-nav {
     align-items: flex-start;
     flex-direction: column;
@@ -454,5 +448,3 @@ section, .hero {
     margin-top: 1.5rem;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

@@ -15,6 +15,11 @@ a {
   color: $primary-color;
 }
 
+p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
 body {
   overflow-x: hidden;
 	background:
@@ -33,6 +38,7 @@ h1 {
 h2 {
   color: $secondary-color;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -42,6 +48,10 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+section, .hero {
+  margin: 1rem 2rem;
 }
 
 #header-home {
@@ -141,7 +151,7 @@ img {
 
 .about {
   align-items: center;
-  line-height: 2.5rem;
+  line-height: 2.5rem;  
 
     .about-avatar img {
       margin-right: 1.5rem;
@@ -259,7 +269,7 @@ img {
       text-decoration: none;
   
       &:nth-child(2) {
-        left: 275px;
+        left: 250px;
       }
     }
     
@@ -279,6 +289,11 @@ img {
     }
   
   }
+}
+
+
+#hundeskov-card h2, #hundeskov-card p, #hundeskov-card a{
+  color: #fff; 
 }
 
 
@@ -379,6 +394,10 @@ img {
       .container-top {
         flex-direction: column;
         max-width: $breakpoint-desktop;
+
+        .hero-content-text {
+          align-self: flex-start;
+        }
       }
     
       #main-nav {
