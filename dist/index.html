@@ -58,7 +58,7 @@
             Jeg hedder Mads Jacobsen, jeg er frontend udvikler bosat i Holstebro.
             Jeg har en stor passion for kodning, design, kaffe og træning. 
             <br>
-            Jeg er i 2021 startet min "rejse" ved at lære HTML og CSS.
+            Jeg er startet min "rejse" som udvikler ved at lære HTML og CSS.
             Derefter har jeg bygget på med Javascript og Bootstrap.
             <br>
             Til slut har jeg haft en længere detour omkring backend for at få en bedre sammenhæng i min forståelse.
@@ -163,7 +163,8 @@
       <img src="./img/undraw_message_sent_re_q2kl.svg" alt="" srcset="">
     </div>
       <div class="kontakt-form">
-        <form action="action_page.php">
+        <div class="besked" id="besked-container"></div>
+        <form action="action_page.php" method="POST" id="kontakt-form">
             <label for="navn">
             </label>
             <input class="form-group" type="text" id="navn" name="navn" placeholder="Navn">
@@ -177,6 +178,6 @@
   </div>
 </section>
 
-<script src="./js/script.js"></script>
+<script src="./js/script.js" defer></script>
 </body>
 </html>

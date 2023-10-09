@@ -369,6 +369,15 @@ section, .hero {
   font: var(--fa-font-solid);
   content: "\f1d8";
 }
+.kontakt-box .besked {
+  display: none;
+  padding: 10px;
+  width: 90%;
+  background-color: #4CAF50;
+  color: #000;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
 
 @media (max-width: 1024px) {
   .container-top {
@@ -390,6 +399,7 @@ section, .hero {
     opacity: 0;
     height: 0;
     width: 100%;
+    display: none;
   }
   #main-nav .active {
     display: flex;

@@ -46,3 +46,43 @@ const navBarLinks = document.getElementsByClassName('navbar-links')[0]
 toggleBtn.addEventListener('click', () => {
   navBarLinks.classList.toggle('active')
 })
+
+
+//Kontakt formular
+
+if (document.readyState !== 'loading') {
+  console.log("DOM LOADED")
+  const form = document.getElementById("kontakt-form");
+  const beskedContainer = document.getElementById("besked-container");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Send formdata til action_form.php via AJAX
+    const formData = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "action_page.php", true);
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+
+    xhr.onload = function () {
+      const respons = JSON.parse(xhr.responseText);
+      if (respons.success) {
+        // Vis succesbesked
+        beskedContainer.style.backgroundColor = "#4CAF50CC";
+        beskedContainer.innerHTML = respons.besked;
+      } else {
+        // Vis fejlbesked
+        beskedContainer.style.backgroundColor = "#FF0000CC";
+        let fejlListe = "<ul>";
+        respons.fejl.forEach(function (fejl) {
+          fejlListe += "<li>" + fejl + "</li>";
+        });
+        fejlListe += "</ul>";
+        beskedContainer.innerHTML = fejlListe;
+      }
+      beskedContainer.style.display = "block";
+    };
+
+    xhr.send(formData);
+  });
+};

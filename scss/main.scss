@@ -387,6 +387,16 @@ section, .hero {
 
         }
       }
+      
+      .besked {
+        display: none;
+        padding: 10px;
+        width: 90%;
+        background-color: #4CAF50;
+        color: #000;
+        margin: 1rem 0;
+        border-radius: 10px;
+      }
     }
     
 
@@ -413,6 +423,7 @@ section, .hero {
           opacity: 0;
           height: 0;
           width: 100%;
+          display: none;
         }
 
         .active {
