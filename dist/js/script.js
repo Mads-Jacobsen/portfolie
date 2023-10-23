@@ -51,7 +51,6 @@ toggleBtn.addEventListener('click', () => {
 //Kontakt formular
 
 if (document.readyState !== 'loading') {
-  console.log("DOM LOADED")
   const form = document.getElementById("kontakt-form");
   const beskedContainer = document.getElementById("besked-container");
 

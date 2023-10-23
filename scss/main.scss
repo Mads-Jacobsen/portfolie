@@ -37,7 +37,7 @@ h1 {
 
 h2 {
   color: $secondary-color;
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: 1rem;
 }
 
@@ -86,8 +86,12 @@ section, .hero {
     border-bottom: 3px transparent solid;
     padding: 1rem;
     transition: border-color 0.5s;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     display: block;
+
+    i {
+      margin-right: 0.5rem;
+    }
 
     &:hover {
       border-color: $secondary-color;
@@ -135,7 +139,7 @@ section, .hero {
 .container-top {
   display: flex;
   justify-content: space-evenly;
-  min-height: 100vh;
+  min-height: calc(100vh - 110px);
   align-items: center;
 }
 
@@ -151,16 +155,15 @@ section, .hero {
 
 .about {
   align-items: center;
-  line-height: 2.5rem;  
 
     .about-avatar img {
       margin-right: 1.5rem;
       transform: rotateY(180deg);
       max-width: 600px;
     }
-  
-    .container-about {
-      display: flex;
+
+    .about-text > p {
+      line-height: 2;
     }
 }
 
@@ -223,6 +226,7 @@ section, .hero {
     cursor: pointer;
     position: relative;
     color: $color-primary-white;
+    background-color: #fff;
     box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
   
     &:nth-child(2), &:nth-child(3) {
@@ -236,7 +240,6 @@ section, .hero {
       height: 100%;
       top: 0;
       left: 0;
-      opacity: 0.4;
       transition: opacity .2s ease-out;
     }
   
@@ -246,6 +249,7 @@ section, .hero {
       margin: 0;
       transition: inset .3s .3s ease-out;
       font-family: $font-1;
+      font-size: 1.3rem;
       font-weight:  bold;
       text-transform: uppercase;
       color: $dot-color;
@@ -285,7 +289,7 @@ section, .hero {
     
     &:hover img {
       transition: opacity .3s ease-in;
-      opacity: 0.9;
+      opacity: 1;
     }
   
   }
@@ -299,10 +303,13 @@ section, .hero {
 
 .kontakt-box {
   display: flex;
+  position: relative;
+  z-index: 2;
   min-height: 35rem;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 2rem;
+  background-color: #fff;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 
   h2 {
@@ -310,6 +317,7 @@ section, .hero {
   }
 
   .kontakt-text {
+    padding: 2.5rem;
     margin-top: 2rem;
     width: 50%;
     display: flex;
@@ -324,6 +332,7 @@ section, .hero {
   }
   .kontakt-form {
     margin-top: 2rem;
+    padding: 2.5rem;
     width: 50%;
 
     .form-group {
