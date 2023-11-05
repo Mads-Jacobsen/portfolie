@@ -178,9 +178,10 @@ section, .hero {
   margin-right: 1.5rem;
   transform: rotateY(180deg);
   max-width: 600px;
+  justify-self: center;
 }
 .about .about-text > p {
-  line-height: 2;
+  line-height: 1.7;
 }
 
 /* Techstack */
@@ -362,6 +363,7 @@ section, .hero {
   color: #838788;
   position: relative;
   left: 0;
+  top: 5px;
 }
 .kontakt-box .kontakt-form .btn {
   display: inline-block;
@@ -463,6 +465,14 @@ section, .hero {
   .kontakt-box {
     align-items: center;
     min-height: 50rem;
+  }
+  .kontakt-box .kontakt-text {
+    width: 100%;
+    padding: 1rem;
+  }
+  .kontakt-box .kontakt-form {
+    width: 100%;
+    padding: 1rem;
   }
 }
 @media (max-width: 1150px) {

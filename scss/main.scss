@@ -160,10 +160,11 @@ section, .hero {
       margin-right: 1.5rem;
       transform: rotateY(180deg);
       max-width: 600px;
+      justify-self: center;
     }
 
     .about-text > p {
-      line-height: 2;
+      line-height: 1.7;
     }
 }
 
@@ -375,6 +376,7 @@ section, .hero {
       color: #838788;
       position: relative;
       left: 0;
+      top: 5px;
     }
 
     .btn {
@@ -501,6 +503,16 @@ section, .hero {
       .kontakt-box {
         align-items: center;
         min-height: 50rem;
+
+        .kontakt-text {
+          width: 100%;
+          padding: 1rem;
+        }
+
+        .kontakt-form {
+          width: 100%;
+          padding: 1rem;
+        }
       }
 
     }
